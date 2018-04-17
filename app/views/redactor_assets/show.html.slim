@@ -1,0 +1,27 @@
+p#notice = notice
+
+p
+  strong Data file name:
+  = @redactor_asset.data_file_name
+p
+  strong Data content type:
+  = @redactor_asset.data_content_type
+p
+  strong Data file size:
+  = @redactor_asset.data_file_size
+p
+  strong Assetable:
+  = @redactor_asset.assetable_id
+p
+  strong Assetable type:
+  = @redactor_asset.assetable_type
+p
+  strong Created at:
+  = @redactor_asset.created_at
+p
+  strong Updated at:
+  = @redactor_asset.updated_at
+
+=> link_to 'Edit', edit_redactor_asset_path(@redactor_asset)
+'|
+=< link_to 'Back', redactor_assets_path

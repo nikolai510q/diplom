@@ -1,0 +1,30 @@
+= form_for @redactor_asset do |f|
+  - if @redactor_asset.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@redactor_asset.errors.count, "error")} prohibited this redactor_asset from being saved:"
+      ul
+        - @redactor_asset.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.label :data_file_name
+    = f.text_field :data_file_name
+  .field
+    = f.label :data_content_type
+    = f.text_field :data_content_type
+  .field
+    = f.label :data_file_size
+    = f.number_field :data_file_size
+  .field
+    = f.label :assetable_id
+    = f.number_field :assetable_id
+  .field
+    = f.label :assetable_type
+    = f.text_field :assetable_type
+  .field
+    = f.label :created_at
+    = f.datetime_select :created_at
+  .field
+    = f.label :updated_at
+    = f.datetime_select :updated_at
+  .actions = f.submit

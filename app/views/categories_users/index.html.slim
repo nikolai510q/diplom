@@ -1,0 +1,23 @@
+h1 Listing categories_users
+
+table
+  thead
+    tr
+      th Category
+      th User
+      th
+      th
+      th
+
+  tbody
+    - @categories_users.each do |categories_user|
+      tr
+        td = categories_user.category_id
+        td = categories_user.user_id
+        td = link_to 'Show', categories_user
+        td = link_to 'Edit', edit_categories_user_path(categories_user)
+        td = link_to 'Destroy', categories_user, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Categories user', new_categories_user_path

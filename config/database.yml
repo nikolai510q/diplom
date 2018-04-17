@@ -1,0 +1,19 @@
+staging:
+  adapter: postgresql
+  database: diplomFL_staging
+
+production:
+  adapter: postgresql
+  database: 
+  username: 
+  password: 
+  host: 
+
+development:
+  adapter: postgresql
+  database: diplomFL_development
+
+test:
+  adapter: postgresql
+  database: diplomFL_test
+  min_messages: warning

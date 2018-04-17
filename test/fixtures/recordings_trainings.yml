@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  type_training: MyString
+  time_training: 2018-04-05 23:41:40
+  trainer_name: MyString
+  phone_number: MyString
+
+two:
+  user_id: 1
+  type_training: MyString
+  time_training: 2018-04-05 23:41:40
+  trainer_name: MyString
+  phone_number: MyString

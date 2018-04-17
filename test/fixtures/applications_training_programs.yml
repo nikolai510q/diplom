@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  gender: false
+  weight: 1
+  age: 1
+  training_experiense: 1
+  training_per_week: 1
+  type_of_training: MyString
+  physical_activity: MyString
+  body_type: MyString
+  training_weight_info: MyText
+  user_wish: MyText
+
+two:
+  user_id: 1
+  gender: false
+  weight: 1
+  age: 1
+  training_experiense: 1
+  training_per_week: 1
+  type_of_training: MyString
+  physical_activity: MyString
+  body_type: MyString
+  training_weight_info: MyText
+  user_wish: MyText

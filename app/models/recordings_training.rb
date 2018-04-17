@@ -1,0 +1,2 @@
+class RecordingsTraining < ApplicationRecord
+end

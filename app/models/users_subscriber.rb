@@ -1,0 +1,2 @@
+class UsersSubscriber < ApplicationRecord
+end

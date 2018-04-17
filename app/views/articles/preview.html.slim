@@ -1,0 +1,12 @@
+.blog-post.blog-single-post
+  .single-post-title
+    h3
+      = strip_tags(@article.header)
+  .single-post-content
+    = sanitize(@article.body)
+  .single-post-info
+    i.glyphicon.glyphicon-time
+    =' Time.now.strftime("%d %^b, %Y | ")
+    |Tags:
+    = @article.tag_list.join(', ')
+  = link_to 'Вернуться к редактору', '', :onclick => 'history.go(-1)', class: "btn btn-primary btn-sm"

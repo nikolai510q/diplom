@@ -1,0 +1,33 @@
+h1 Listing redactor_assets
+
+table
+  thead
+    tr
+      th Data file name
+      th Data content type
+      th Data file size
+      th Assetable
+      th Assetable type
+      th Created at
+      th Updated at
+      th
+      th
+      th
+
+  tbody
+    - @redactor_assets.each do |redactor_asset|
+      tr
+        td = redactor_asset.data_file_name
+        td = redactor_asset.data_content_type
+        td = redactor_asset.data_file_size
+        td = redactor_asset.assetable_id
+        td = redactor_asset.assetable_type
+        td = redactor_asset.created_at
+        td = redactor_asset.updated_at
+        td = link_to 'Show', redactor_asset
+        td = link_to 'Edit', edit_redactor_asset_path(redactor_asset)
+        td = link_to 'Destroy', redactor_asset, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Redactor asset', new_redactor_asset_path

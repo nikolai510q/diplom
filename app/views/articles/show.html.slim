@@ -1,0 +1,28 @@
+.blog-post.blog-single-post
+  .single-post-title
+    .rating style="display: inline-block;"
+      .box
+        div
+          - if current_user
+            = link_to rate_path(id: UsersRating.check_mark(current_user.id, @article.id), mark: 1, article_id: @article.id)
+              i class=(['glyphicon', 'glyphicon-chevron-up', @article.current_user_voted_up?(current_user.id) ? 'active-chevron' : nil] )
+        .marks
+          = @article.rating
+        div
+          - if current_user
+            = link_to rate_path(id: UsersRating.check_mark(current_user.id, @article.id), mark: 0, article_id: @article.id)
+              i class=(['glyphicon', 'glyphicon-chevron-down', @article.current_user_voted_down?(current_user.id) ? 'active-chevron' : nil] )
+    div style="display: inline-block;vertical-align: top;margin-top: 37px;margin-left: 20px;"
+      h3
+        = strip_tags(@article.header)
+  .single-post-content
+    = sanitize(@article.body)
+  .single-post-info
+    i.glyphicon.glyphicon-time
+    =' @article.updated_at.strftime("%d %^b, %Y | ")
+    = render 'tag_list'
+    = " | Категории: #{ @article.categories.map(&:name).join(', ')}"
+    = " | Автор: #{ @article.user.name}"
+  .all-comments
+    = render partial: "comments/template", locals: {commentable: @article, new_comment: @new_comment}
+

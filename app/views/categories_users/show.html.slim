@@ -1,0 +1,12 @@
+p#notice = notice
+
+p
+  strong Category:
+  = @categories_user.category_id
+p
+  strong User:
+  = @categories_user.user_id
+
+=> link_to 'Edit', edit_categories_user_path(@categories_user)
+'|
+=< link_to 'Back', categories_users_path

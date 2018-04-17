@@ -1,0 +1,32 @@
+// Place all the styles related to the pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.training {
+list-style: none;
+padding: 0;
+}
+.training li {
+font-family: "Trebuchet MS", "Lucida Sans";
+padding: 7px 20px;
+margin-bottom: 10px;
+border-radius: 5px;
+border-left: 10px solid #f05d22; 
+box-shadow: 2px -2px 5px 0 rgba(0,0,0,.1),
+     -2px -2px 5px 0 rgba(0,0,0,.1),
+    2px 2px 5px 0 rgba(0,0,0,.1),
+    -2px 2px 5px 0 rgba(0,0,0,.1);
+font-size: 20px;
+letter-spacing: 2px;
+transition: 0.3s all linear;
+}
+.training li:nth-child(2){border-color: #8bc63e;}
+.training li:nth-child(3){border-color: #fcba30;}
+.training li:nth-child(4){border-color: #1ccfc9;}
+.training li:nth-child(5){border-color: #493224;}
+.training li:hover {border-left: 10px solid transparent;}
+.training li:nth-child(1):hover {border-right: 10px solid #f05d22;}
+.training li:nth-child(2):hover {border-right: 10px solid #8bc63e;}
+.training li:nth-child(3):hover {border-right: 10px solid #fcba30;}
+.training li:nth-child(4):hover {border-right: 10px solid #1ccfc9;}
+.training li:nth-child(5):hover {border-right: 10px solid #493224;}
