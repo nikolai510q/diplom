@@ -1,16 +1,12 @@
 # This migration comes from acts_as_taggable_on_engine (originally 1)
-if ActiveRecord.gem_version >= Gem::Version.new('5.0')
-  class ActsAsTaggableOnMigration < ActiveRecord::Migration[5.1]; end
-else
-  class ActsAsTaggableOnMigration < ActiveRecord::Migration; end
-end
+class ActsAsTaggableOnMigration < ActiveRecord::Migration[5.1]; end
 ActsAsTaggableOnMigration.class_eval do
   def self.up
-    create_table :tags do |t|
+    create_table :tags, :force => true do |t|
       t.string :name
     end
 
-    create_table :taggings do |t|
+    create_table :taggings, :force => true do |t|
       t.references :tag
 
       # You should make sure that the column created is
@@ -24,8 +20,6 @@ ActsAsTaggableOnMigration.class_eval do
 
       t.datetime :created_at
     end
-
-    add_index :taggings, :tag_id
     add_index :taggings, [:taggable_id, :taggable_type, :context]
   end
 

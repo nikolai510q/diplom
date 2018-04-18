@@ -1,9 +1,5 @@
 # This migration comes from acts_as_taggable_on_engine (originally 2)
-if ActiveRecord.gem_version >= Gem::Version.new('5.0')
-  class AddMissingUniqueIndices < ActiveRecord::Migration[5.1]; end
-else
-  class AddMissingUniqueIndices < ActiveRecord::Migration; end
-end
+class AddMissingUniqueIndices < ActiveRecord::Migration[5.1]; end
 AddMissingUniqueIndices.class_eval do
   def self.up
     add_index :tags, :name, unique: true
