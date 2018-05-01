@@ -26,6 +26,7 @@ class OmniauthController < ApplicationController
 	def vk_params
 		password = "#{rand(100)}_sample_password_#{rand(100)}"
 		{
+			name: auth_hash[:info][:name],
 			email: auth_hash[:info][:email],
 			password: password,
 			password_confirmation: password

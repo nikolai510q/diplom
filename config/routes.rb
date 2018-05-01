@@ -5,7 +5,6 @@ Rails.application.routes.draw do
   #, :controllers => { :omniauth_callbacks => "omniauth_callbacks" }
   devise_scope :user do
     get "/sign_in" => "devise/sessions#new" # custom path to login/sign_in
-    get "/sign_up" => "devise/registrations#new", as: "new_user_registration" # custom path to sign_up/registration
     get "/admin/sign_out", to: "devise/sessions#destroy", as: :logout_admin
   end
 
