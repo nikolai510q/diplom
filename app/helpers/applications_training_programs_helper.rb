@@ -1,0 +1,2 @@
+module ApplicationsTrainingProgramsHelper
+end
