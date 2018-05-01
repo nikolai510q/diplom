@@ -1,0 +1,9 @@
+.post-comments
+  h4
+    ="Количество комментариев: "
+    =commentable.comment_threads.count
+
+= render partial: "comments/reply", locals: {comments: commentable.root_comments}
+
+= render partial: "comments/form", locals: {new_comment: new_comment}
+

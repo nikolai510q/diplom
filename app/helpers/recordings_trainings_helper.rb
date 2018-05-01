@@ -1,0 +1,2 @@
+module RecordingsTrainingsHelper
+end

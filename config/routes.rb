@@ -38,6 +38,8 @@ Rails.application.routes.draw do
 
   get 'auth/vkontakte/callback', to: 'omniauth#create'
 
+  resources :recordings_trainings, only: [:new, :create]
+
 
 
 
