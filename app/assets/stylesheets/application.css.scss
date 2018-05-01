@@ -60,7 +60,8 @@
 }
 
 body {
-	background-image: image-url("bgimg4.png");
+	// background-image: image-url("bgimg4.png");
+  background-color: #fff;
 }
 
 
@@ -486,3 +487,16 @@ Price Style
   margin-bottom: 50px;
 }
 
+/*--------------------------------------------------------------------------
+Trainers Style
+--------------------------------------------------------------------------*/
+
+.trainers-main-div{
+  width: 100%;
+}
+
+.trainers-page{
+  display: inline-flex;
+  justify-content: space-between;
+  width: 100;
+}
