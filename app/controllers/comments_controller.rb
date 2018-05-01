@@ -6,7 +6,7 @@ class CommentsController < ApplicationController
     respond_to do |format|
       if @comment.save
         make_child_comment
-        format.html  { redirect_to(:back, notice: 'Comment was successfully added.') }
+        format.html  { redirect_to(article_url(commentable), notice: 'Коммент добавлен.') }
       else
         format.html  { redirect_to article_url(commentable) }
       end

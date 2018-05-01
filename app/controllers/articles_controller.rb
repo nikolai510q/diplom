@@ -54,17 +54,22 @@
     @article = Article.new(article_params)
     # FIXME: IS THIS NORMAL?
     @article.user_id = current_user.id
-    # FIXME
-    if params[:preview]
-      render 'preview'
-    elsif params[:category] && @article.save
-      @article.assign_categories(params.require(:category))
-      redirect_to articles_url
+    if @article.save
+      redirect_to articles_path, notice: 'Статья отправлена'
     else
-      @categories = Category.all
-      # FIXME
-      render new_article_path
+      redirect_to new_article_path, error: 'Ошибка'
     end
+    # FIXME
+    # if params[:preview]
+    #   render 'preview'
+    # elsif params[:category] && @article.save
+    #   @article.assign_categories(params.require(:category))
+    #   redirect_to articles_url
+    # else
+    #   @categories = Category.all
+    #   # FIXME
+    #   render new_article_path
+    # end
   end
 
   def update

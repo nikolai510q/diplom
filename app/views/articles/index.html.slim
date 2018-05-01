@@ -18,7 +18,7 @@
         - if current_user.try(:admin?)
           /FIXME Why "confirm:" dont work?
           = link_to "Удалить статью", article_path(article), method: :put, "data-confirm" => "Вы уверенены?", remote: true
-      /! /.col-sm-4
+= button_to "Создать статью", new_article_path, class: "", method: :get
 .row
   center
     = paginate @articles

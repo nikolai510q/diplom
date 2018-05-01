@@ -13,14 +13,14 @@ footer {
   left: 0;
   bottom: 0;
   width: 100%;
+
+ 	a {
+		color: white;
+ 	}
+
+	a:hover {
+		color: lightgrey;
+		text-decoration: none;
+ 	}
 	
-}
-
-a {
-	color: white;
-}
-
-a:hover {
-	color: lightgrey;
-	text-decoration: none;
 }
