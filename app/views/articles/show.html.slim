@@ -23,6 +23,7 @@
     = render 'tag_list'
     = " | Категории: #{ @article.categories.map(&:name).join(', ')}"
     = " | Автор: #{ @article.user.name}"
-  .all-comments
-    = render partial: "comments/template", locals: {commentable: @article, new_comment: @new_comment}
+  - if user_signed_in?
+    .all-comments
+      = render partial: "comments/template", locals: {commentable: @article, new_comment: @new_comment}
 
