@@ -9,6 +9,9 @@
 							<%= current_user.email %>, не Вы?
 							<%= link_to "Выход", destroy_user_session_path,  :method => :delete %>
 						</div>
+						<% if current_user.admin? %>
+							<%= link_to "AP", admin_root_path %>
+						<% end %>
 					<% else %>
 						<%= link_to "Регистрация", new_user_registration_path %>
 						<%= link_to "Вход", new_user_session_path %>	
