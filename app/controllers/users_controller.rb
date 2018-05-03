@@ -12,8 +12,8 @@ class UsersController < ApplicationController
 
   def index
     page = params[:page] || 1
-    @users_search = User.all.ransack(params[:q])
-    @users = @users_search.result.page(page).per(10)
+    @users_search = User.ransack(params[:q])
+    @users = @users_search.result
   end
 
   def subscribe

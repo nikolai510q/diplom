@@ -21,7 +21,7 @@ class User < ApplicationRecord
   validates :name, presence: true    
 
   def full_name
-    self.name + ' ' + self.lastname
+    self.name.to_s + ' ' + self.lastname.to_s
   end
 
   #new--------------
