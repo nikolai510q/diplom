@@ -10,7 +10,7 @@
 							<%= link_to "Выход", destroy_user_session_path,  :method => :delete %>
 						</div>
 						<% if current_user.admin? %>
-							<%= link_to "AP", admin_root_path %>
+							<%= link_to "Администрирование", admin_root_path %>
 						<% end %>
 					<% else %>
 						<%= link_to "Регистрация", new_user_registration_path %>

@@ -10,6 +10,7 @@ class Article < ActiveRecord::Base
   validates :user, :header, :announce, :body, presence: true
 
   before_save :set_rating
+  
 
   scope :for_user, ->(user) {
     categories_ids = user.categories.pluck(:id)
@@ -41,6 +42,7 @@ class Article < ActiveRecord::Base
     list.uniq!
     list - [self.user_id]
   end
+
 
   def set_rating
     rate = 0

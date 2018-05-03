@@ -46,16 +46,8 @@ class User < ApplicationRecord
     verifier.generate(user.id)
   end
 
-  def sub_unsub_user(user)
-    if self.subscribers.include?(user)
-      self.subscribers.destroy(user)
-    else
-      self.subscribers << user
-    end
-  end
-
   def subscriptions_ids
-    subscribers.pluck(:id)
+    following_users.pluck(:id)
   end
   #-----------------
 end

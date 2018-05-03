@@ -11,9 +11,10 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery-ui
 //= require bootstrap-sprockets
 //= require jquery_ujs
-// require turbolinks
+//= require turbolinks
 //= require redactor-rails
 //= require redactor-rails/plugins
 //= require_tree .
