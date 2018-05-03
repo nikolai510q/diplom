@@ -1,0 +1,18 @@
+- @articles.each do |article|
+  .blog-post.blog-single-post
+    .single-post-title
+      h3
+        = sanitize(article.excerpts.header)
+    .single-post-content
+      = sanitize(article.excerpts.announce)
+    .single-post-info
+      i.glyphicon.glyphicon-time
+      =' article.updated_at.strftime("%d %^b, %Y")
+      i.glyphicon.glyphicon-comment
+      =' article.comment_threads.count
+      = link_to "Читать", article_path(article), class: "btn btn-primary btn-sm", style: "float: right;"
+/! /.col-sm-4
+.row
+  center
+    = paginate @articles
+
