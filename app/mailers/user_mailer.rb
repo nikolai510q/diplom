@@ -11,4 +11,9 @@ class UserMailer < ApplicationMailer
     @user = User.find(user_id)
     mail(to: @user.email, subject: 'New Article!')
   end
+
+  def test
+    @text = 'kokoskadsd'
+    mail(to: 'meisterofocode@gmail.com', subject: 'test!')
+  end
 end

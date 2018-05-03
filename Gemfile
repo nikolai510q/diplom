@@ -70,6 +70,8 @@ gem 'jquery-rails'
 gem 'redactor-rails'
 gem 'ransack'
 
+gem 'acts_as_follower', github: 'tcocca/acts_as_follower', branch: 'master'
+
 gem 'jquery-ui-rails'
 gem 'acts_as_commentable_with_threading'
 gem 'acts-as-taggable-on'

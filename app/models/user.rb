@@ -7,7 +7,8 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   
 
-         
+  acts_as_followable
+  acts_as_follower   
 
   has_many :articles, dependent: :destroy
   has_many :accounts, dependent: :destroy
@@ -15,8 +16,7 @@ class User < ApplicationRecord
   has_many :comments
   has_and_belongs_to_many :categories
 
-  has_many :follows, :foreign_key => "user_id", :dependent => :destroy
-  has_many :subscribers, through: :follows
+  
   #------------------
   validates :name, presence: true    
 
