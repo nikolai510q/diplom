@@ -1,8 +1,16 @@
-<%= search_form_for @users_search do |f| %>
- <%= f.search_field :name_or_lastname_or_email_cont, class: "", placeholder: "Search users" %>
+<%= form_tag users_path, method: :get do %>
+  <%= text_field_tag :q %>
 <% end %>
+<%= 'Пользователи не найдены' if @users.blank? %>
 <% @users.each do |user| %>
 	<div>
 		<%= user.full_name + ' ' + user.email %>
+	</div>
+<% end %>
+<hr>
+<%= 'Статьи не найдены' if @articles.blank? %>
+<% @articles.each do |article| %>
+	<div>
+		<%= render 'articles/article', article: article %>
 	</div>
 <% end %>
