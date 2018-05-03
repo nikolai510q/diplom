@@ -20,6 +20,10 @@ class User < ApplicationRecord
   #------------------
   validates :name, presence: true    
 
+  def full_name
+    self.name + ' ' + self.lastname
+  end
+
   #new--------------
   def access_token
     User.create_access_token(self)

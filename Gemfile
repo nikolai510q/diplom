@@ -68,6 +68,7 @@ gem 'omniauth'
 gem 'omniauth-vkontakte'
 gem 'jquery-rails'
 gem 'redactor-rails'
+gem 'ransack'
 
 gem 'jquery-ui-rails'
 gem 'acts_as_commentable_with_threading'
