@@ -4,6 +4,8 @@
 					<%= link_to "О фитнес клубе", info_path %>
 					<%= link_to "Цены", price_path %>
 					<%= link_to "О трехерах", trainers_path %>
+
+					<%= link_to image_tag("search.svg", border: 0, width: 25, height: 25), users_path, :method => :get%>
 					<% if user_signed_in? %>
           	<div>
 							<%= current_user.email %>, не Вы?
@@ -14,10 +16,10 @@
 						<% end %>
 					<% else %>
 						<%= link_to "Регистрация", new_user_registration_path %>
-						<%= link_to "Вход", new_user_session_path %>	
+						<%= link_to "Вход", new_user_session_path %>
 						<%= link_to "auth/vkontakte" do %>
 						vk
-						<% end %>					
+						<% end %>
 					<% end %>
   </nav>
 </header>

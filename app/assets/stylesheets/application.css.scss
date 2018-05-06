@@ -279,30 +279,30 @@ body {
 /*--------------------------------------------------------------------------
 + Buttons Style
 --------------------------------------------------------------------------*/
-.btn {
-  border: 1px solid #4f8db3;
-  -webkit-border-radius: 2px;
-  -webkit-background-clip: padding-box;
-  -moz-border-radius: 2px;
-  -moz-background-clip: padding;
-  border-radius: 2px;
-  background-clip: padding-box;
-  color: #FFFFFF;
-  cursor: pointer;
-  display: inline-block;
-  text-transform: none;
-  -webkit-transition: all .25s ease;
-  -moz-transition: all .25s ease;
-  -o-transition: all .25s ease;
-  -ms-transition: all .25s ease;
-  transition: all .25s ease;
-  text-align: center;
-  background: none repeat scroll 0 0 #4f8db3;
-  text-shadow: none;
-  box-shadow: none;
-  color: #FFF;
-  white-space: nowrap;
-}
+// .btn {
+//   border: 1px solid #4f8db3;
+//   -webkit-border-radius: 2px;
+//   -webkit-background-clip: padding-box;
+//   -moz-border-radius: 2px;
+//   -moz-background-clip: padding;
+//   border-radius: 2px;
+//   background-clip: padding-box;
+//   color: #FFFFFF;
+//   cursor: pointer;
+//   display: inline-block;
+//   text-transform: none;
+//   -webkit-transition: all .25s ease;
+//   -moz-transition: all .25s ease;
+//   -o-transition: all .25s ease;
+//   -ms-transition: all .25s ease;
+//   transition: all .25s ease;
+//   text-align: center;
+//   background: none repeat scroll 0 0 #4f8db3;
+//   text-shadow: none;
+//   box-shadow: none;
+//   color: #FFF;
+//   white-space: nowrap;
+// }
 .btn:hover {
   background: none repeat scroll 0 0 #3b3c41;
   color: #FFF;
@@ -462,24 +462,24 @@ Price Style
 
 }
 
-.training-button{
-  width: 40%;
-}
-
-.training-button button{
-  width: 100%;
-  margin-bottom: 130px;
-  background-color: green;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  transition-duration: 0.4s;
-}
-
-.training-button button:hover {
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
-}
+// .training-button{
+//   width: 40%;
+// }
+//
+// .training-button{
+//   width: 100%;
+//   margin-bottom: 130px;
+//   background-color: green;
+//   color: white;
+//   padding: 15px 32px;
+//   text-align: center;
+//   text-decoration: none;
+//   transition-duration: 0.4s;
+// }
+//
+// .training-button:hover {
+//     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+// }
 
 .description-div{
   width: 100%;
@@ -509,4 +509,3 @@ Trainers Style
 .container{
   margin-bottom: 10vh;
 }
-

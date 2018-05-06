@@ -1,7 +1,7 @@
 - @articles.each do |article|
   = render 'article', article: article
 - if user_signed_in?
-	= button_to "Создать статью", new_article_path, class: "", method: :get
+	= button_to "Создать статью", new_article_path, class: "btn btn-primary", method: :get
 .row
   center
     = paginate @articles

@@ -6,18 +6,18 @@ window.init_redactor = function(){
   if (csrf_param !== undefined && csrf_token !== undefined) {
       params = csrf_param + "=" + encodeURIComponent(csrf_token);
   }
-  
+
    $('.extended-redactor').redactor({
         // You can specify, which ones plugins you need.
         // If you want to use plugins, you have add plugins to your
         // application.js and application.css files and uncomment the line below:
-        // "plugins": ['video'],
-        // "imageUpload":"/redactor_rails/pictures?" + params,
-        // "imageGetJson":"/redactor_rails/pictures",
-        // "fileUpload":"/redactor_rails/documents?" + params,
-        // "fileGetJson":"/redactor_rails/documents",
-        // "path":"/assets/redactor-rails",
-        // "css":"style.css"
+        "plugins": ['video'],
+        "imageUpload":"/redactor_rails/pictures?" + params,
+        "imageGetJson":"/redactor_rails/pictures",
+        "fileUpload":"/redactor_rails/documents?" + params,
+        "fileGetJson":"/redactor_rails/documents",
+        "path":"/assets/redactor-rails",
+        "css":"style.css"
       });
 }
 

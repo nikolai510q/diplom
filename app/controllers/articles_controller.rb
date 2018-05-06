@@ -54,14 +54,18 @@
     @article = Article.new(article_params)
     # FIXME: IS THIS NORMAL?
     @article.user_id = current_user.id
-    if @article.save
-      redirect_to articles_path, notice: 'Статья отправлена'
+    if params[:preview].present?
+      render :preview
     else
-      redirect_to new_article_path, error: 'Ошибка'
+      if @article.save
+        redirect_to articles_path, notice: 'Статья отправлена'
+      else
+        redirect_to new_article_path, error: 'Ошибка'
+      end
     end
+
     # FIXME
-    # if params[:preview]
-    #   render 'preview'
+
     # elsif params[:category] && @article.save
     #   @article.assign_categories(params.require(:category))
     #   redirect_to articles_url
@@ -99,4 +103,3 @@ end
 	# 	@articles = @articles.or(Article.where(["announce LIKE ?","%#{params[:search]}%"]))
 	# 	@articles = @articles.or(Article.where(["header LIKE ?","%#{params[:search]}%"]))
 	# end
-
