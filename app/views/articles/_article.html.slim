@@ -10,10 +10,8 @@ div class=["article-#{article.id}"]
       =' article.updated_at.strftime("%d %^b, %Y")
       i.glyphicon.glyphicon-comment
       =' article.comment_threads.count
-      = " | Категории: #{ article.categories.map(&:name).join(', ')}"
       = " | Автор: #{ article.user.name}"
       = " | "
-      = link_to "Читать", article_path(article), class: "btn btn-primary btn-sm", style: "float: right;"
+      = link_to "Читать", article_path(article), class: "btn btn-default btn-sm", style: "float: right;"
       - if current_user.try(:admin?)
-        /FIXME Why "confirm:" dont work?
         = link_to "Удалить статью", article_path(article), method: :put, "data-confirm" => "Вы уверенены?", remote: true
