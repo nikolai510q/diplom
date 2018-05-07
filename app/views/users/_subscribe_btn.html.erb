@@ -1,0 +1,5 @@
+<% if user.followed_by?(current_user) %>
+  <%= link_to 'Подписаться', user_subscribe_path(user), remote: true %>
+<% else %>
+  <%= link_to 'Отписаться', user_unsubscribe_path(user), remote: true%>
+<% end %>

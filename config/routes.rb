@@ -23,15 +23,13 @@ Rails.application.routes.draw do
   # resources :comments, only: [:create, :update, :destroy]
 
   # show articles by category
-  get 'category/:name', to: 'categories#show'
 
-  get 'subscribe_category/:name', to: 'categories#subscribe'
 
-  get '/unsubscribe/:signature' => 'categories#unsubscribe', as: 'unsubscribe'
 
   get 'users/search', to: 'users#index', as: :users
   get 'users/:id/subscribe', to: 'users#subscribe', as: :user_subscribe
- 
+  get 'users/:id/unsubscribe', to: 'users#unsubscribe', as: :user_unsubscribe
+
  	get 'info', to: 'pages#info'
   get 'price', to: 'pages#price'
   get 'trainers', to: 'pages#trainers'
@@ -99,5 +97,3 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
 end
-
-  

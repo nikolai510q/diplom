@@ -17,18 +17,22 @@ class UsersController < ApplicationController
 			@articles = []
 		else
 			@users = User.search(name_or_lastname_cont: params[:q]).result
-			@articles = Article.search(header_or_body_cont: params[:q]).result
+			@articles = Article.approved.search(header_or_body_cont: params[:q]).result
 		end
 	end
 
 	def subscribe
 		@user = User.find(params[:id])
-		current_user.sub_unsub_user(@user)
-		redirect_to users_path
+		current_user.follow(@user)
+	end
+
+	def unsubscribe
+		@user = User.find(params[:id])
+		current_user.stop_following(@user)
 	end
 
 	def show_by_tag
-    @articles = Article.tagged_with(params[:tag]).page_kaminari(params[:page])
+    @articles = Article.approved.tagged_with(params[:tag]).page_kaminari(params[:page])
     render 'index'
   end
 
