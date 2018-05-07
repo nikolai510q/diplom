@@ -1,2 +1,2 @@
-user_card = $('.user-card[data-id"' + <%= @user.id %> + '"]');
+user_card = $('.user-card[data-id="' + <%= @user.id %> + '"]');
 user_card.html('<%= j render "user_card", user: @user %>');
