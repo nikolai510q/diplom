@@ -1,0 +1,18 @@
+.exercises-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  .exercises-list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    border-right: 3px solid;
+    width: 48%;
+    &:last-child {
+      border-right: 0;
+      align-items: flex-end;
+    }
+  }
+}
