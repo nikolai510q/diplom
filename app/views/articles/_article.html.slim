@@ -14,4 +14,4 @@ div class=["article-#{article.id}"]
       = " | "
       = link_to "Читать", article_path(article), class: "btn btn-default btn-sm", style: "float: right;"
       - if current_user.try(:admin?)
-        = link_to "Удалить статью", article_path(article), method: :put, "data-confirm" => "Вы уверенены?", remote: true
+        = link_to "Удалить статью", article_path(article), method: :delete, "data-confirm" => "Вы уверенены?", remote: true

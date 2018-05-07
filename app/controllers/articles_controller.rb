@@ -77,14 +77,19 @@
   end
 
   def update
-    if current_user.try(:admin?)
-      @article = Article.find(params[:id])
-      @article.update_attributes(approved: false)
-    end
+    # if current_user.try(:admin?)
+    #   @article = Article.find(params[:id])
+    #   @article.update_attributes(approved: false)
+    # end
     respond_to do |format|
       format.html { redirect_to articles_url }
       format.js
     end
+  end
+
+  def destroy
+    @article = Article.find_by_id params[:id]
+    @article.destroy
   end
 
   private
