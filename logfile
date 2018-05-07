@@ -1,0 +1,5 @@
+2018-05-07 12:26:04.704 MSK [2902] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2018-05-07 12:26:04.704 MSK [2902] LOG:  listening on IPv6 address "::1", port 5432
+2018-05-07 12:26:04.705 MSK [2902] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2018-05-07 12:26:04.752 MSK [2904] LOG:  database system was shut down at 2018-05-06 18:44:01 MSK
+2018-05-07 12:26:04.765 MSK [2902] LOG:  database system is ready to accept connections

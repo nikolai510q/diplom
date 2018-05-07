@@ -1,16 +1,23 @@
-<%= form_tag users_path, method: :get do %>
-  <%= text_field_tag :q %>
-<% end %>
-<%= 'Пользователи не найдены' if @users.blank? %>
-<% @users.each do |user| %>
-	<div>
-		<%= user.full_name + ' ' + user.email %>
-	</div>
-<% end %>
-<hr>
-<%= 'Статьи не найдены' if @articles.blank? %>
-<% @articles.each do |article| %>
-	<div>
-		<%= render 'articles/article', article: article %>
-	</div>
-<% end %>
+<h2>Поиск пользователей и статей</h2>
+  <%= form_tag users_path, method: :get do %>
+    <%= text_field_tag :q, class: 'form-control' %>
+    <input value="Искать" type="submit" class="btn btn-success">
+  <% end %>
+  <br>
+  <%= 'Пользователи не найдены' if @users.blank? %>
+  <% @users.each do |user| %>
+  	<div>
+  		<%= user.full_name + ' ' + user.email %>
+  	</div>
+  <% end %>
+  <hr>
+  <%= 'Статьи не найдены' if @articles.blank? %>
+  <% @articles.each do |article| %>
+  	<div>
+  		<%= render 'articles/article', article: article %>
+  	</div>
+  <% end %>
+  <hr>
+<div class="">
+  <%= render 'tag_list_search' %>
+</div>

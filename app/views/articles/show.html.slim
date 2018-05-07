@@ -10,7 +10,6 @@
     i.glyphicon.glyphicon-time
     =' @article.updated_at.strftime("%d %^b, %Y | ")
     = render 'tag_list'
-    = " | Категории: #{ @article.categories.map(&:name).join(', ')}"
     = " | Автор: #{ @article.user.name}"
   - if user_signed_in?
     .all-comments

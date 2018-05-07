@@ -27,4 +27,9 @@ class UsersController < ApplicationController
 		redirect_to users_path
 	end
 
+	def show_by_tag
+    @articles = Article.tagged_with(params[:tag]).page_kaminari(params[:page])
+    render 'index'
+  end
+
 end
