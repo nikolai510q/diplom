@@ -36,6 +36,13 @@ Rails.application.routes.draw do
 
   get 'auth/vkontakte/callback', to: 'omniauth#create'
 
+
+  resources :constructor_trainings, only: [:index, :new] do
+    member do
+      post 'add/:exercise_id', to: 'constructor_trainings#add_exercise', as: :add_exercise
+      post 'remove/:exercise_id', to: 'constructor_trainings#remove_exercise', as: :remove_exercise
+    end
+  end
   resources :recordings_trainings, only: [:new, :create]
   resources :applications_training_programs, only: [:new, :create]
 

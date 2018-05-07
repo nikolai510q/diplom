@@ -1,0 +1,5 @@
+<div class="exercises-list added_list">
+  <% exercises.each do |exercise| %>
+    <%= link_to exercise.exercise_name, remove_exercise_constructor_training_path(id: @training.id, exercise_id: exercise.id), class: 'exercises-item', remote: true, method: :post %>
+  <% end %>
+</div>
