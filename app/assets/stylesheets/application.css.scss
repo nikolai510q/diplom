@@ -466,16 +466,22 @@ Price Style
 //   width: 40%;
 // }
 //
-// .training-button{
-//   width: 100%;
-//   margin-bottom: 130px;
-//   background-color: green;
-//   color: white;
-//   padding: 15px 32px;
-//   text-align: center;
-//   text-decoration: none;
-//   transition-duration: 0.4s;
-// }
+.training-button{
+  color: white;
+  padding: 25px 32px;
+  text-align: center;
+  text-decoration: none;
+  transition-duration: 0.4s;
+}
+
+.training-button>li:first-child{
+  padding-bottom: 150px;
+}
+
+.training-button input{
+  width: 360px;
+  height: 50px;
+}
 //
 // .training-button:hover {
 //     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);

@@ -12,6 +12,10 @@ class ApplicationsTrainingProgramsController < ApplicationController
 		end
 	end
 
+	def index
+		@applications = ApplicationsTrainingProgram.all
+	end
+
 	private
 
   def application_training_params

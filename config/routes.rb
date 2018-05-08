@@ -44,7 +44,7 @@ Rails.application.routes.draw do
     end
   end
   resources :recordings_trainings, only: [:new, :create]
-  resources :applications_training_programs, only: [:new, :create]
+  resources :applications_training_programs, only: [:new, :create, :index]
 
 
 

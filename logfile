@@ -9,3 +9,78 @@
 	
 2018-05-07 15:07:32.420 MSK [4726] ERROR:  database "diplomFL_test" already exists
 2018-05-07 15:07:32.420 MSK [4726] STATEMENT:  CREATE DATABASE "diplomFL_test" ENCODING = 'utf8'
+2018-05-07 19:18:48.239 MSK [4815] ERROR:  relation "categories" does not exist at character 566
+2018-05-07 19:18:48.239 MSK [4815] STATEMENT:                SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+	                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod,
+	                     c.collname, col_description(a.attrelid, a.attnum) AS comment
+	                FROM pg_attribute a
+	                LEFT JOIN pg_attrdef d ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+	                LEFT JOIN pg_type t ON a.atttypid = t.oid
+	                LEFT JOIN pg_collation c ON a.attcollation = c.oid AND a.attcollation <> t.typcollation
+	               WHERE a.attrelid = '"categories"'::regclass
+	                 AND a.attnum > 0 AND NOT a.attisdropped
+	               ORDER BY a.attnum
+	
+2018-05-07 19:18:52.679 MSK [4815] ERROR:  relation "categories" does not exist at character 28
+2018-05-07 19:18:52.679 MSK [4815] STATEMENT:  SELECT "categories".* FROM "categories"
+2018-05-07 19:19:24.345 MSK [4815] ERROR:  relation "categories" does not exist at character 28
+2018-05-07 19:19:24.345 MSK [4815] STATEMENT:  SELECT "categories".* FROM "categories"
+2018-05-07 19:22:27.542 MSK [4815] ERROR:  relation "categories" does not exist at character 28
+2018-05-07 19:22:27.542 MSK [4815] STATEMENT:  SELECT "categories".* FROM "categories"
+2018-05-07 19:59:53.988 MSK [4815] ERROR:  relation "categories" does not exist at character 28
+2018-05-07 19:59:53.988 MSK [4815] STATEMENT:  SELECT "categories".* FROM "categories"
+2018-05-07 20:00:29.366 MSK [4815] ERROR:  relation "categories" does not exist at character 28
+2018-05-07 20:00:29.366 MSK [4815] STATEMENT:  SELECT "categories".* FROM "categories"
+2018-05-07 20:02:27.814 MSK [4707] ERROR:  database "diplomFL_development" is being accessed by other users
+2018-05-07 20:02:27.814 MSK [4707] DETAIL:  There are 2 other sessions using the database.
+2018-05-07 20:02:27.814 MSK [4707] STATEMENT:  DROP DATABASE "diplomFL_development";
+	
+2018-05-07 20:02:45.773 MSK [4707] ERROR:  database "diplomFL_development" is being accessed by other users
+2018-05-07 20:02:45.773 MSK [4707] DETAIL:  There is 1 other session using the database.
+2018-05-07 20:02:45.773 MSK [4707] STATEMENT:  DROP DATABASE "diplomFL_development";
+	
+2018-05-07 20:03:31.007 MSK [6823] FATAL:  database "diplomFL_development" does not exist
+2018-05-07 20:04:21.424 MSK [6830] ERROR:  database "diplomFL_test" already exists
+2018-05-07 20:04:21.424 MSK [6830] STATEMENT:  CREATE DATABASE "diplomFL_test" ENCODING = 'utf8'
+2018-05-07 20:11:17.176 MSK [6885] ERROR:  relation "categories" does not exist at character 566
+2018-05-07 20:11:17.176 MSK [6885] STATEMENT:                SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+	                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod,
+	                     c.collname, col_description(a.attrelid, a.attnum) AS comment
+	                FROM pg_attribute a
+	                LEFT JOIN pg_attrdef d ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+	                LEFT JOIN pg_type t ON a.atttypid = t.oid
+	                LEFT JOIN pg_collation c ON a.attcollation = c.oid AND a.attcollation <> t.typcollation
+	               WHERE a.attrelid = '"categories"'::regclass
+	                 AND a.attnum > 0 AND NOT a.attisdropped
+	               ORDER BY a.attnum
+	
+2018-05-07 20:11:20.354 MSK [6885] ERROR:  relation "categories" does not exist at character 28
+2018-05-07 20:11:20.354 MSK [6885] STATEMENT:  SELECT "categories".* FROM "categories"
+2018-05-07 20:11:35.850 MSK [6885] ERROR:  relation "categories" does not exist at character 28
+2018-05-07 20:11:35.850 MSK [6885] STATEMENT:  SELECT "categories".* FROM "categories"
+2018-05-08 02:32:42.716 MSK [15656] ERROR:  relation "categories" does not exist at character 28
+2018-05-08 02:32:42.716 MSK [15656] STATEMENT:  SELECT "categories".* FROM "categories"
+2018-05-08 02:33:29.827 MSK [15656] ERROR:  relation "categories" does not exist at character 28
+2018-05-08 02:33:29.827 MSK [15656] STATEMENT:  SELECT "categories".* FROM "categories"
+2018-05-08 02:34:05.607 MSK [15656] ERROR:  relation "categories" does not exist at character 28
+2018-05-08 02:34:05.607 MSK [15656] STATEMENT:  SELECT "categories".* FROM "categories"
+2018-05-08 02:34:17.519 MSK [15656] ERROR:  relation "categories" does not exist at character 28
+2018-05-08 02:34:17.519 MSK [15656] STATEMENT:  SELECT "categories".* FROM "categories"
+2018-05-08 02:40:00.193 MSK [16700] ERROR:  database "diplomFL_development" already exists
+2018-05-08 02:40:00.193 MSK [16700] STATEMENT:  CREATE DATABASE "diplomFL_development" ENCODING = 'utf8'
+2018-05-08 02:40:00.207 MSK [16701] ERROR:  database "diplomFL_test" already exists
+2018-05-08 02:40:00.207 MSK [16701] STATEMENT:  CREATE DATABASE "diplomFL_test" ENCODING = 'utf8'
+2018-05-08 02:44:17.659 MSK [16788] FATAL:  role "postgres" does not exist
+2018-05-08 02:44:28.292 MSK [16789] FATAL:  role "nikolai" does not exist
+2018-05-08 02:44:48.245 MSK [16793] FATAL:  role "nikolai" does not exist
+2018-05-08 02:46:15.200 MSK [16805] FATAL:  role "postgres" does not exist
+2018-05-08 02:52:05.416 MSK [16922] ERROR:  database "development.rb" does not exist
+2018-05-08 02:52:05.416 MSK [16922] STATEMENT:  DROP DATABASE "development.rb";
+2018-05-08 02:54:40.748 MSK [16962] ERROR:  database "diplomFL_development" already exists
+2018-05-08 02:54:40.748 MSK [16962] STATEMENT:  CREATE DATABASE "diplomFL_development" ENCODING = 'utf8'
+2018-05-08 02:54:40.764 MSK [16963] ERROR:  database "diplomFL_test" already exists
+2018-05-08 02:54:40.764 MSK [16963] STATEMENT:  CREATE DATABASE "diplomFL_test" ENCODING = 'utf8'
+2018-05-08 02:56:29.127 MSK [17014] FATAL:  database "nikolai510" does not exist
+2018-05-08 02:56:57.823 MSK [17019] FATAL:  database "nikolai510" does not exist
+2018-05-08 02:56:59.488 MSK [17021] FATAL:  database "nikolai510" does not exist
+2018-05-08 02:57:05.046 MSK [17024] FATAL:  database "nikolai510" does not exist

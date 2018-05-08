@@ -1,0 +1,12 @@
+<% @applications.each do |application| %>
+  <div class="application-item">
+    <div class="user">
+      <%= application.user.full_name %>
+    </div>
+    <div class="actions">
+      <% application.constructor_trainings.each do |ct| %>
+        <%= link_to 'Создать программу тренировок', constructor_training_path(ct) %>
+      <% end %>
+    </div>
+  </div>
+<% end %>
