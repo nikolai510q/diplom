@@ -1,5 +1,6 @@
 ActiveAdmin.register Article do
-  actions :all, :except => [:new, :create]
+  before_action :skip_sidebar!
+  actions :all, :except => [:new, :create, :destroy]
   menu label: "Статьи"
 
   permit_params :header, :announce, :body, :approved, :user_id

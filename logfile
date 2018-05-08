@@ -84,3 +84,5 @@
 2018-05-08 02:56:57.823 MSK [17019] FATAL:  database "nikolai510" does not exist
 2018-05-08 02:56:59.488 MSK [17021] FATAL:  database "nikolai510" does not exist
 2018-05-08 02:57:05.046 MSK [17024] FATAL:  database "nikolai510" does not exist
+2018-05-08 15:22:17.868 MSK [19249] ERROR:  relation "categories" does not exist at character 29
+2018-05-08 15:22:17.868 MSK [19249] STATEMENT:  SELECT  "categories".* FROM "categories" LIMIT $1

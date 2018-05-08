@@ -16,7 +16,9 @@
   = article.text_area  :body, class: "form-control extended-redactor"
   p
   /FIXME
-
+  -if current_user.admin?
+    span Опубликовать&nbsp;
+    = article.check_box :approved
   p
   =' article.submit "Отправить на модерацию", class: "btn btn-primary"
   = article.submit "Предпросмотр", name: 'preview', class: "btn btn-primary"

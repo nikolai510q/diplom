@@ -95,7 +95,11 @@
   private
 
   def article_params
-    params.require(:article).permit(:header, :announce, :body, :tag_list)
+    if current_user.admin?
+      params.require(:article).permit!
+    else
+      params.require(:article).permit(:header, :announce, :body, :tag_list)
+    end
   end
 end
 
