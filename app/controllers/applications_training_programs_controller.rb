@@ -5,8 +5,10 @@ class ApplicationsTrainingProgramsController < ApplicationController
 
 	def create
 		@application_training = ApplicationsTrainingProgram.new(application_training_params)
+		@application_training.user = current_user
+		# binding.pry
 		if @application_training.save
-			redirect_to price_path, notice: 'Запись успешно создана'
+			redirect_to root_path, notice: 'Заказ оформлен'
 		else
 			render :new
 		end
@@ -19,7 +21,7 @@ class ApplicationsTrainingProgramsController < ApplicationController
 	private
 
   def application_training_params
-    params.require(:recordings_training).permit!
+    params.require(:applications_training_program).permit!
   end
 
 end
