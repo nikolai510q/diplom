@@ -5,6 +5,10 @@ class ConstructorTrainingsController < ApplicationController
   end
 
   def show
+    @added_exercises = @training.exercises
+  end
+
+  def edit
     @initial_exercises = Exercise.where.not(id: @training.exercises_ids)
     @added_exercises = @training.exercises
   end

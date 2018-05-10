@@ -16,7 +16,7 @@ ActiveAdmin.register ApplicationsTrainingProgram do
 
     column :created_at
     actions defaults: true do |applicatin|
-      link_to "Конструктор", constructor_training_path(applicatin)
+      link_to "Конструктор", edit_constructor_training_path(applicatin)
     end
   end
 
