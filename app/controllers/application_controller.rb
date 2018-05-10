@@ -31,7 +31,7 @@ class ApplicationController < ActionController::Base
 
 	# it allow save username when user sign up
 	def configure_permitted_parameters
-		devise_parameter_sanitizer.permit(:sign_up) { |u| u.permit(:name, :email, :password, :password_confirmation, :remember_me) }
+		devise_parameter_sanitizer.permit(:sign_up) { |u| u.permit(:name, :lastname, :email, :password, :password_confirmation, :remember_me) }
 	end
 
 	# # name/email devise auth
