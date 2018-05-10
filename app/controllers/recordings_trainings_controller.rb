@@ -9,7 +9,7 @@ class RecordingsTrainingsController < ApplicationController
 		if @recording.save
 			redirect_to price_path, success: 'Запись успешно создана'
 		else
-			render :new
+			redirect_to new_recordings_training_path, :flash => { :error => "Запись не создана! Поля заполнены неверно" }
 		end
 	end
 

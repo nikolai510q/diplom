@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180508154916) do
+ActiveRecord::Schema.define(version: 20180510074558) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -120,6 +120,7 @@ ActiveRecord::Schema.define(version: 20180508154916) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "approved"
+    t.integer "trainer_id"
   end
 
   create_table "redactor_assets", force: :cascade do |t|
@@ -162,6 +163,13 @@ ActiveRecord::Schema.define(version: 20180508154916) do
     t.string "name"
     t.integer "taggings_count", default: 0
     t.index ["name"], name: "index_tags_on_name", unique: true
+  end
+
+  create_table "trainers", force: :cascade do |t|
+    t.string "fio"
+    t.string "avatar"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

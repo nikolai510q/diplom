@@ -8,7 +8,7 @@
           = form_for(@recording) do |f|
             fieldset
               .form-group
-                = f.label :Тип_тренировки
+                = f.label :type_training, 'Тип тренировки'
                 p
                   = f.radio_button :type_training, 'Персональная'
                   = ' Персональная'

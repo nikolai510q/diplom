@@ -1,5 +1,6 @@
 class RecordingsTraining < ApplicationRecord
   belongs_to :user
+  belongs_to :trainer
   validates :type_training, presence: true
   validates :time_training, presence: true
   validates :trainer_name, presence: true
