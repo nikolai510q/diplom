@@ -13,9 +13,9 @@ class ConstructorTrainingsController < ApplicationController
     @added_exercises = @training.exercises
   end
 
-  def new
-    @initial_exercises = Exercise.where.not(id: @training.exercises_ids)
-    @added_exercises = @training.exercises
+  def update
+    @training.update(training_params)
+    redirect_to :back
   end
 
   def add_exercise
@@ -33,6 +33,9 @@ class ConstructorTrainingsController < ApplicationController
   end
 
   private
+  def training_params
+    params.require(:constructor_training).permit(:trainer_comment)
+  end
 
   def set_training
     @training = ConstructorTraining.find_or_initialize_by(id: params[:id])

@@ -1,4 +1,11 @@
 <div class="exercises-container">
   <%= render 'exercises_list', exercises: @initial_exercises %>
   <%= render 'added_list', exercises: @added_exercises %>
+  <%= form_for @training, method: :put do |f| %>
+    <div class="form-group">
+      <%= f.label :Описание_выполнения_упражнений %>
+      <%= f.text_field :trainer_comment, class: 'form-control' %>
+      <%= f.submit 'Сохранить описание' %>
+    </div>
+  <% end %>
 </div>
