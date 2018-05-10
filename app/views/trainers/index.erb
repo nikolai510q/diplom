@@ -1,0 +1,10 @@
+<div class="trainers-main-div">
+  <h1>Наши тренера</h1>
+  <% @trainers.each_slice(4) do |trainers_group| %>
+    <div class="trainers-page">
+      <% trainers_group.each do |trainer| %>
+        <%= render 'trainer', trainer: trainer %>
+      <% end %>
+    </div>
+  <% end %>
+</div>

@@ -32,7 +32,8 @@ Rails.application.routes.draw do
 
  	get 'info', to: 'pages#info'
   get 'price', to: 'pages#price'
-  get 'trainers', to: 'pages#trainers'
+  
+  resources :trainers, only: [:index]  
 
   get 'auth/vkontakte/callback', to: 'omniauth#create'
 

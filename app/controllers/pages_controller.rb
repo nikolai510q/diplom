@@ -6,7 +6,5 @@ class PagesController < ApplicationController
 	def price
 	end
 
-	def trainers
-	end
 
 end
