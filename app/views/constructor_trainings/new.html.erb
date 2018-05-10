@@ -1,4 +1,9 @@
 <div class="exercises-container">
   <%= render 'exercises_list', exercises: @initial_exercises %>
   <%= render 'added_list', exercises: @added_exercises %>
+  <%= form_for @training do |f| %>
+    <div class="form-group">
+      <%= form.label :Описание_выполнения_упражнений %>
+      <%= form.text_field :title, id: :training_title, class: 'form-control' %>
+    </div>
 </div>
