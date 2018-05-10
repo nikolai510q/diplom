@@ -11,11 +11,13 @@
   <body>
     <%= render "layouts/header" %>
     <div class="container">
-      <p><br><br></p>
-
-      <% flash.each do |key, value| %>
-        <div class="flash #{key}"><%= value %></div>
-      <% end %>
+      <p><br></p>
+      <% flash.each do |name, massage| %>
+      <% alert_class = name == 'notice' ? 'info' : name%>
+				<div class="flash alert alert-<%= alert_class %>">
+					<%= massage %>
+				</div>
+			<% end %>
       <%= yield %>
     </div>
     <%= render "layouts/footer" %>

@@ -86,3 +86,5 @@
 2018-05-08 02:57:05.046 MSK [17024] FATAL:  database "nikolai510" does not exist
 2018-05-08 15:22:17.868 MSK [19249] ERROR:  relation "categories" does not exist at character 29
 2018-05-08 15:22:17.868 MSK [19249] STATEMENT:  SELECT  "categories".* FROM "categories" LIMIT $1
+2018-05-08 18:50:52.434 MSK [20883] ERROR:  cached plan must not change result type
+2018-05-08 18:50:52.434 MSK [20883] STATEMENT:  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT $2

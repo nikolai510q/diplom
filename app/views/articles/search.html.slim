@@ -1,7 +1,7 @@
 - @articles.each do |article|
   .blog-post.blog-single-post
     .single-post-title
-      h3
+      h2
         = sanitize(article.excerpts.header)
     .single-post-content
       = sanitize(article.excerpts.announce)
@@ -15,4 +15,3 @@
 .row
   center
     = paginate @articles
-

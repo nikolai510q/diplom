@@ -1,16 +1,16 @@
 .blog-post.blog-single-post
   .single-post-title
 
-    div style="display: inline-block;vertical-align: top;margin-left: 20px;"
-      h3
+    div style="display: inline-block;vertical-align: top;margin: auto;"
+      h2
         = strip_tags(@article.header)
   .single-post-content
     = @article.body.html_safe
   .single-post-info
-    i.glyphicon.glyphicon-time
-    =' @article.updated_at.strftime("%d %^b, %Y | ")
+    span Опубликовано:&nbsp
+    =' @article.updated_at.strftime("%d.%m.%Y | ")
     = render 'tag_list'
-    = " | Автор: #{ @article.user.name}"
+    = " | Автор: #{ @article.user.full_name}"
   - if user_signed_in?
     .all-comments
       = render partial: "comments/template", locals: {commentable: @article, new_comment: @new_comment}

@@ -1,8 +1,8 @@
 #
 class OmniauthController < ApplicationController
 	before_action :current_resources
-	
-	def create	
+
+	def create
 		if @user
 			@account[user: @user]
 		else
@@ -10,14 +10,14 @@ class OmniauthController < ApplicationController
 		end
 		@account.save
 		session[:user_id] = sign_in(@user)
-		redirect_to root_path	
+		redirect_to root_path	info: 'Добро пожаловать!'
 	end
-	
+
 	private
 
 	def current_resources
-		@account = Account.find_or_create_by(uid: auth_hash[:uid], 
-																				 provider: auth_hash[:provider], 
+		@account = Account.find_or_create_by(uid: auth_hash[:uid],
+																				 provider: auth_hash[:provider],
 																				 email: auth_hash[:info][:email])
 
 		@user = User.find_by(email: auth_hash[:info][:email])

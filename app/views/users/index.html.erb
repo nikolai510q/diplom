@@ -1,22 +1,24 @@
-<h2>Поиск пользователей и статей</h2>
-  <%= form_tag users_path, method: :get do %>
-    <%= text_field_tag :q, params[:q], class: 'form-control' %>
+<div class="search-class">
+  <h2>Поиск пользователей и статей</h2>
+    <%= form_tag users_path, method: :get do %>
+      <%= text_field_tag :q, params[:q], class: 'form-control' %>
+      <br>
+      <input value="Искать" type="submit" class="btn btn-success">
+    <% end %>
     <br>
-    <input value="Искать" type="submit" class="btn btn-success">
-  <% end %>
-  <br>
-  <%= 'Пользователи не найдены' if @users.blank? %>
-  <% @users.each do |user| %>
-  	<%= render 'user_card', user: user %>
-  <% end %>
-  <hr>
-  <%= 'Статьи не найдены' if @articles.blank? %>
-  <% @articles.each do |article| %>
-  	<div>
-  		<%= render 'articles/article', article: article %>
-  	</div>
-  <% end %>
-  <hr>
-<div class="">
-  <%= render 'tag_list_search' %>
+    <%= 'Пользователи не найдены' if @users.blank? %>
+    <% @users.each do |user| %>
+    	<%= render 'user_card', user: user %>
+    <% end %>
+    <hr>
+    <%= 'Статьи не найдены' if @articles.blank? %>
+    <% @articles.each do |article| %>
+    	<div>
+    		<%= render 'articles/article', article: article %>
+    	</div>
+    <% end %>
+    <hr>
+  <div class="tags-class">
+    <%= render 'tag_list_search' %>
+  </div>
 </div>

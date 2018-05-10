@@ -9,7 +9,13 @@
             fieldset
               .form-group
                 = f.label :Тип_тренировки
-                = f.text_field :type_training, autofocus: true, class: "form-control"
+                p
+                  = f.radio_button :type_training, 'Персональная'
+                  = ' Персональная'
+                p
+                  = f.radio_button :type_training, 'Групповая'
+                  = ' Групповая '
+                / = f.text_field :type_training, autofocus: true, class: "form-control"
               .form-group
                 = f.label :Время
                 = f.datetime_field :time_training, class: "form-control"

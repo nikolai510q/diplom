@@ -5,11 +5,15 @@ ActiveAdmin.register_page 'Dashboard' do
       span class: 'blank_slate' do
         span do
           para "Статей в базе: #{Article.count}"
-          para "Всего ользователей: #{User.count}"
+          para "Всего пользователей: #{User.count}"
           para "Зарегистрировано сегодня: #{User.where('created_at >= ?', Time.zone.now.beginning_of_day).count}"
+          para "Всего записей на тренировки: #{RecordingsTraining.count}"
+          para "Записей на тренировки сегодня: #{RecordingsTraining.where('created_at >= ?', Time.zone.now.beginning_of_day).count}"
+
         end
       end
     end
+      link_to 'Import Demo', '/'
 
     # Here is an example of a simple dashboard with columns and panels.
     #

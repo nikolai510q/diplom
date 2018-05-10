@@ -1,10 +1,16 @@
 <%- if controller_name != 'sessions' %>
   <%= link_to "Авторизоваться", new_session_path(resource_name) %><br />
+  <%= link_to "/auth/vkontakte" do %>
+  Войти через Вконтакте
+  <% end %>
 <% end -%>
 
 <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
   <%= link_to "Зарегистрироваться", new_registration_path(resource_name) %><br />
   <%= link_to "Забыли пароль?", new_user_password_path %><br />
+  <%= link_to "/auth/vkontakte" do %>
+  Войти через Вконтакте
+  <% end %>
 <% end -%>
 
 <%- if devise_mapping.omniauthable? %>

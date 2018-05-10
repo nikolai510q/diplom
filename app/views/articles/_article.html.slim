@@ -1,17 +1,20 @@
 div class=["article-#{article.id}"]
   .blog-post.blog-single-post
     .single-post-title
-      h3
+      h2
         = strip_tags(article.header)
     .single-post-content
       = strip_tags(article.announce)
     .single-post-info
-      i.glyphicon.glyphicon-time
-      =' article.updated_at.strftime("%d %^b, %Y")
-      i.glyphicon.glyphicon-comment
-      =' article.comment_threads.count
-      = " | Автор: #{ article.user.name}"
+      span Опубликовано:&nbsp
+      =' article.updated_at.strftime("%d.%m.%Y")
       = " | "
+      span Комментарии:
+      =' article.comment_threads.count
+      p
+      = " Отправил: #{ article.user.full_name}"
       = link_to "Читать", article_path(article), class: "btn btn-default btn-sm", style: "float: right;"
       - if current_user.try(:admin?)
+        span
+          = " | "
         = link_to "Удалить статью", article_path(article), method: :delete, "data-confirm" => "Вы уверенены?", remote: true

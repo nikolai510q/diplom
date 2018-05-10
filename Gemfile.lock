@@ -49,6 +49,7 @@ GEM
       erubi (~> 1.4)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.0, >= 1.0.3)
+    active_admin_flat_skin (0.1.2)
     activejob (5.1.6)
       activesupport (= 5.1.6)
       globalid (>= 0.3.6)
@@ -121,14 +122,9 @@ GEM
       warden (~> 1.2.3)
     erubi (1.7.1)
     execjs (2.7.0)
-    face_of_active_admin (0.0.16)
-      font-awesome-sass (>= 4.5.0)
-      rails (>= 3.2.0)
     faraday (0.12.2)
       multipart-post (>= 1.2, < 3)
     ffi (1.9.23)
-    font-awesome-sass (5.0.9)
-      sass (>= 3.2)
     formtastic (3.1.5)
       actionpack (>= 3.2.13)
     formtastic_i18n (0.6.0)
@@ -326,6 +322,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_admin_flat_skin
   activeadmin!
   acts-as-taggable-on
   acts_as_commentable_with_threading
@@ -337,7 +334,6 @@ DEPENDENCIES
   carrierwave
   coffee-rails (~> 4.2)
   devise
-  face_of_active_admin
   jbuilder (~> 2.5)
   jquery-rails
   jquery-ui-rails

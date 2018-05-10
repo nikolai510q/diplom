@@ -5,8 +5,9 @@ class RecordingsTrainingsController < ApplicationController
 
 	def create
 		@recording = RecordingsTraining.new(record_params)
+		@recording.user = current_user
 		if @recording.save
-			redirect_to price_path, notice: 'Запись успешно создана'
+			redirect_to price_path, success: 'Запись успешно создана'
 		else
 			render :new
 		end

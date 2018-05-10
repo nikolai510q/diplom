@@ -31,7 +31,8 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 
 gem 'activeadmin', github: 'activeadmin'
-# gem 'face_of_active_admin'
+gem 'active_admin_flat_skin'
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
