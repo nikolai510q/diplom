@@ -32,13 +32,13 @@ Rails.application.routes.draw do
 
  	get 'info', to: 'pages#info'
   get 'price', to: 'pages#price'
-  
-  resources :trainers, only: [:index]  
+
+  resources :trainers, only: [:index]
 
   get 'auth/vkontakte/callback', to: 'omniauth#create'
 
 
-  resources :constructor_trainings, only: [:index, :new, :edit, :show] do
+  resources :constructor_trainings, only: [:index, :edit, :show, :update] do
     member do
       post 'add/:exercise_id', to: 'constructor_trainings#add_exercise', as: :add_exercise
       post 'remove/:exercise_id', to: 'constructor_trainings#remove_exercise', as: :remove_exercise

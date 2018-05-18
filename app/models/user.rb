@@ -20,6 +20,7 @@ class User < ApplicationRecord
 
   #------------------
   validates :name, presence: true
+  validates :lastname, presence: true
 
   def full_name
     self.name.to_s + ' ' + self.lastname.to_s

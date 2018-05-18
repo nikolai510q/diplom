@@ -1,11 +1,13 @@
 <div class="exercises-container">
+  <div>
+    <%= form_for @training, method: :put do |f| %>
+  </div>
   <%= render 'exercises_list', exercises: @initial_exercises %>
   <%= render 'added_list', exercises: @added_exercises %>
-  <%= form_for @training, method: :put do |f| %>
     <div class="form-group">
-      <%= f.label :Описание_выполнения_упражнений %>
-      <%= f.text_field :trainer_comment, class: 'form-control' %>
-      <%= f.submit 'Сохранить описание' %>
+      <%= f.label :Комментарий_к_выполнению_упражнений %>
+      <%= f.text_area :trainer_comment, class: 'large-field' %>
+      <%= f.submit 'Сохранить описание', class: 'btn btn-primary' %>
     </div>
   <% end %>
 </div>

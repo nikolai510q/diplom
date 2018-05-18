@@ -1,4 +1,59 @@
 ru:
+  activerecord:
+    models:
+      user: Пользователи
+      article: Статьи
+      trainer: Тренер
+      exercise:  Упражнения
+      recordings_training: Записи на тренировки
+      applications_training_program: Заказы на индивидуальные программы тренировок
+    attributes:
+      recordings_training:
+        user: "Записавшийся"
+        type_training: "Тип тренировки"
+        time_training: "Записался на"
+        phone_number: "Телефон"
+        approved: "Подтверждена"
+        trainer_name: "К кому записан"
+        created_at: "Дата записи"
+        updated_at: "Изменено"
+      applications_training_program:
+        weight: "Вес"
+        growth: "Рост"
+        age: "Возраст"
+        training_experiense: "Опыт"
+        training_per_week: "Тренировок в неделю"
+        type_of_training: "Тип тренировок"
+        physical_activity: "Физ. активность"
+        body_type: "Телосложение"
+        training_weight_info: "Веса"
+        user_wish: "Пожелания"
+        created_at: "Время заказа"
+      article:
+        header: "Заголовок"
+        announce: "Краткое описание"
+        body: "Контент"
+        user: "Отправил"
+        approved: "Опубликовано"
+        created_at: "Дата создания"
+        updated_at: "Дата изменения"
+      user:
+        email: "Электронный адрес"
+        name: "Имя"
+        lastname: "Поле с фамилией"
+        password: "Пароль"
+        created_at: "Дата создания аккаунта"
+        last_sign_in_at: "Последний раз заходил"
+        current_sign_in_ip: "Текущий IP"
+        last_sign_in_ip: "Последний IP"
+      trainer:
+        fio: "Имя Фамилия"
+        avatar: "Аватар"
+        created_at: "Добавлен"
+      exercise:
+        exercise_name: "Название"
+        exercise_description: "Описание"
+      # will translate User attribute "login" as "Handle"
   active_admin:
     dashboard: "Панель управления"
     dashboard_welcome:

@@ -15,6 +15,7 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import 'bootstrap-datetimepicker';
 @import "main";
 
 
@@ -379,5 +380,33 @@ Trainers Style
 }
 
 .alert-error{
+  background-color: red;
+}
+
+.large-field{
+  color:black;
+  border: 1px solid #bbb;
+  min-height: 400px;
+  width: 600px;
+  padding: 10px;
+  height: auto !important;
+  margin-bottom: 15px;
+}
+
+.trainer-page-info img{
+  width: 230px;
+	height: 300px;
+	overflow: hidden;
+	display: inline-block;
+	background-size: cover;
+	background-position: center;
+	border-radius: 3px;
+}
+
+.new_article{
+  color: lightgrey;
+}
+
+.alert-alert{
   background-color: red;
 }

@@ -9,11 +9,9 @@ ActiveAdmin.register Exercise do
   permit_params :exercise_name, :exercise_description
 
   index do
-    selectable_column
     id_column
     column :exercise_name
     column :exercise_description
-    column :created_at
     actions
   end
 

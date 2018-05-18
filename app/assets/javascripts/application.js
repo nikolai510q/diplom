@@ -12,11 +12,14 @@
 //
 //= require jquery
 //= require bootstrap-sprockets
+//= require moment
+//= require bootstrap-datetimepicker
 //= require jquery_ujs
 //= require turbolinks
 //= require redactor-rails
 //= require redactor-rails/plugins
 //= require_tree .
+
 
 $(document).on('ready page:load', function () {
   var searchBlock = $('#search-block');

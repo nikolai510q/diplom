@@ -72,6 +72,9 @@ gem 'jquery-rails'
 gem 'redactor-rails'
 gem 'ransack'
 
+gem 'momentjs-rails', '>= 2.9.0'
+gem 'bootstrap3-datetimepicker-rails', '~> 4.17.47'
+
 gem 'acts_as_follower', github: 'tcocca/acts_as_follower', branch: 'master'
 
 gem 'jquery-ui-rails'

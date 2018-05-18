@@ -15,7 +15,7 @@ class ConstructorTrainingsController < ApplicationController
 
   def update
     @training.update(training_params)
-    redirect_to :back
+    redirect_to edit_constructor_training_path(@training)
   end
 
   def add_exercise

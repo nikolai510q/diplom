@@ -1,8 +1,8 @@
 ActiveAdmin.register ApplicationsTrainingProgram do
   menu priority: 5
   config.batch_actions = true
-  actions :all, :except => [:show, :destroy]
-  menu label: "Заказы"
+  actions :all, :except => [:edit, :new, :create, :destroy]
+  menu label: "Заказы прог. тренировок"
 
   filter :user
   filter :created_at
@@ -13,21 +13,20 @@ ActiveAdmin.register ApplicationsTrainingProgram do
     selectable_column
     id_column
     column :user
-
+    column :weight
+    column :growth
+    column :age
+    column :training_experiense
+    column :training_per_week
+    column :type_of_training
+    column :physical_activity
+    column :body_type
+    column :training_weight_info
+    column :user_wish
     column :created_at
     actions defaults: true do |applicatin|
       link_to "Конструктор", edit_constructor_training_path(applicatin)
     end
   end
-
-
-  form do |f|
-    f.inputs do
-      f.input :user
-
-    end
-    f.actions
-  end
-
 
 end

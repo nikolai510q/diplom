@@ -24,5 +24,8 @@
                 = f.select :trainer_id, Trainer.all.collect{|t| [t.fio, t.id]}, {include_blank: false}, class: "form-control"
               .form-group
                 = f.label :Ваш_телефон
-                = f.text_field :phone_number, class: "form-control"
+                br
+                em
+                  = "(Формат номера 8 999 999 99 99 без пробелов)"
+                = f.text_field :phone_number, maxlength: 11, title: "Формат номера 8ХХХХХХХХХХ", class: "form-control"
               = f.submit "Записаться на тренировку", class: "btn btn-lg btn-success btn-block"

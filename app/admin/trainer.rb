@@ -1,15 +1,14 @@
 ActiveAdmin.register Trainer do
   menu priority: 5
   config.batch_actions = true
-  actions :all, :except => [:show, :destroy]
-  menu label: "Тренеры"
+  actions :all, :except => [:show, :create, :destroy]
+  menu label: "Тренер"
 
   filter :fio
 
   permit_params :fio, :avatar
 
   index do
-    selectable_column
     id_column
     column :fio
     column :avatar

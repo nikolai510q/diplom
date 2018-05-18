@@ -16,7 +16,7 @@ class RecordingsTrainingsController < ApplicationController
 	private
 
   def record_params
-    params.require(:recordings_training).permit(:type_training, :time_training, :trainer_name, :phone_number)
+    params.require(:recordings_training).permit(:type_training, :time_training, :trainer_id, :phone_number)
   end
 
 end
