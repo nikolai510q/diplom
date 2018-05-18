@@ -6,5 +6,5 @@ ThinkingSphinx::Index.define :article, with: :active_record do
   indexes user(:name), as: :author
 
   # attributes
-  has updated_at, approved, rating
+  has updated_at, approved
 end
